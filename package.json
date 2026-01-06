@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:webpack": "webpack",
+    "build:webpack": "webpack -c webpack.config.cjs",
     "build:rolldown": "rolldown -c",
     "build:esbuild": "esbuild src/index.js --bundle --format=esm --outfile=esbuild-dist/index.js",
+    "build:rollup": "rollup --config rollup.config.js",
     "dev": "webpack serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,8 +16,10 @@
   "license": "ISC",
   "packageManager": "pnpm@10.26.2",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.0",
     "esbuild": "^0.27.2",
     "rolldown": "1.0.0-beta.58",
+    "rollup": "^4.55.1",
     "webpack": "^5.104.1",
     "webpack-cli": "^6.0.1"
   }

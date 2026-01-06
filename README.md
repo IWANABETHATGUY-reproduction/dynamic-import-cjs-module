@@ -68,3 +68,7 @@ The bundlers handle the CJS-to-ESM interop differently:
 - **Rolldown & esbuild**: Return a module with a `default` getter
 - **Node.js (unbundled)**: Returns the full CJS module with `__esModule` marker and nested default
 - **Bun (unbundled)**: Returns a cleaner module with direct access to `default`
+
+
+# Ref
+1. https://github.com/rolldown/rolldown/issues/4289
